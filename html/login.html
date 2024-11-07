@@ -3,30 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../css/login.css" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <div class="login-container">
       <h2>Login</h2>
       <form id="loginForm">
-        <label for="userid">User ID</label>
-        <input type="text" id="userid" name="userid" required />
-
-        <br />
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required />
-
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          required
+        />
         <div class="button-container">
-          <button type="submit">Login</button>
-          <button type="button" onclick="resetForm()">Reset</button>
+          <button type="button" onclick="validateLogin()">Login</button>
+          <button type="button" onclick="reset()">Reset</button>
         </div>
       </form>
     </div>
 
     <script>
-      function resetForm() {
+      const validUsername = "briheet";
+      const validPassword = "2200321530062";
+
+      function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === validUsername && password === validPassword) {
+          alert(
+            "Login successful! Redirecting to Currency Converter Dashboard",
+          );
+          window.location.href = "currency-convertor.html";
+        } else {
+          alert("Login failed! Incorrect username or password.");
+        }
+      }
+
+      function reset() {
         document.getElementById("loginForm").reset();
       }
     </script>

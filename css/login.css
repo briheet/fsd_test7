@@ -1,46 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #008080;
+}
+.section {
+  border: 2px solid black;
+  display: flex;
+  padding: 4px;
+}
+.sec1 {
+  border: 2px solid black;
+  padding: 4px;
+  width: 20%;
+  height: 50px;
+}
+.sec2 {
+  border: 2px solid black;
+  padding: 4px;
+  width: 20%;
+  height: 50px;
 }
 
 .login-container {
-  width: 300px;
-  padding: 20px;
+  width: 350px;
+  padding: 20px 30px;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.login-container h2 {
+h2 {
+  text-align: center;
+  color: #333;
   margin-bottom: 20px;
-  color: #333;
 }
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-  text-align: center;
-}
-
-input[type="text"],
-input[type="password"] {
+input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin: 10px;
+  padding: 15px 0px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: rebeccapurple;
+}
+button:focus {
+  outline: none;
+}
+
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
@@ -49,20 +75,7 @@ input[type="password"] {
   justify-content: space-between;
 }
 
-button {
+.button-container button {
   width: 48%;
   padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-}
-
-button[type="button"] {
-  background-color: #f44336;
-  color: white;
 }
